@@ -72,6 +72,50 @@ section{
     justify-content: space-evenly;
 }
 
+.section_item{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}  
+
+.div_buy_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p_buy_item{
+    background-color: green;
+    color: white;
+    border: 2px solid blue;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 45px;
+    margin: 35px;
+
+}
+
+.css_items_img{
+    width: 50%;
+    height: auto;
+    background-color: white;
+    border: 2px solid #FFDE00;
+    border-radius: 7px;
+    margin: 15%;
+    
+}
+
+.p_descripcion_item{
+    color: white;
+    font-size: x-large;
+}
+
+.class_item{
+    text-align: center;
+    width: 40%;
+    flex-direction: column;
+}
+
 .css_shops_items_img{
     margin: 3%;
     padding: 0%;
@@ -125,6 +169,18 @@ footer{
     justify-content: space-between;
 }
 
+.div_items_shop:hover{
+    text-align: center;
+    background-color: #ffffff33;
+    margin: 1%;
+    padding: 4%;
+    border-radius: 20px;
+    border: 3px solid #3B4CCA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .div_price{
     display: flex;
     align-items: center;
@@ -140,6 +196,14 @@ footer{
     padding: 0px;
 }
 
+
+.p_title_item{
+    color: white;
+    font-size: 52px;
+    margin: 0px;
+    padding: 0px;
+}
+
 .p_price_shops{
     color: white;
     font-size: x-large;
@@ -149,11 +213,20 @@ footer{
 }
 
 .p_price_shops1{
-    color: white;
     font-size: xx-large;
     margin: 0px;
     padding: 0px;
     color: green;
+}
+
+.p_price_item{
+    background-color: #f5de4a;
+    border: 2px solid #3B4CCA;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 45px;
+    color: green;
+    padding: 5px;
 }
 
 .p_descuento_shops{
