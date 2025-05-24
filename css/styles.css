@@ -1,0 +1,262 @@
+body{
+    background-color: #CC0000;
+}
+
+
+h1{
+    display: flex; /* Mantiene flexbox */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imagenes verticalmente si tuvieran diferentes alturas */
+    gap: 10%; /* Opcional: Añade un pequeño espacio entre las pokebolas y el logo */
+    /* text-align: center; */ /* Puedes quitar esto si usas justify-content */
+}
+
+.css_logo_img{ /* stilo de la imagen  */
+    width: 50%; /* ajusto el tamaño de la imagen por porcentaje */
+    max-width: 500px; /* ajusto el tope maximo de la imagen para que no ocupe toda la pag.  */
+    min-width: 150px; /* ajusto el tope minimo de la imagen para q sea aun visible y no se distorcione la web  */
+    height: auto; /* mantengo proporción */
+}
+
+.css_pokebola_img{ /* stilo de la imagen  */
+    width: 12%; /* ajusto el tamaño de la imagen por porcentaje */
+    /*max-width: 150px; /* ajusto el tope maximo de la imagen para que no ocupe toda la pag.  */
+    height: auto; /* mantengo proporción */
+}
+
+nav{
+    background-color: #3B4CCA;
+    padding: 10px 20px; /* achico el padding para que el borde azul este mas pegado */
+    font-size: 200%; /* tamaño de la letra */
+    border-radius: 50px; /* la forma circular del borde */
+    border: 3px solid white; /* Borde blanco de 3px */
+    width: fit-content; /* Hace que el ancho del nav se ajuste */
+    margin: 20px auto; /* Centra el bloque nav horizontalmente */
+    display: block; /* bloqueo el margin para q no se modifique */
+}
+
+nav ul{
+    list-style: none; /* borro los puntos de la lista*/
+    padding: 0;
+    margin: 0;
+    text-align: center; /* centro el texto  */
+    display: flex; /* alineo los elementos de la lista  */
+    justify-content: center; /* los alineo horizontamente  */
+    flex-wrap: wrap; /* en caso que la pantalla se achica lo corrige dependiendo del tamaño */
+}
+
+nav ul li a{
+    display: inline-block; /* me aseguro que se mantengan en linea horizontal*/
+    padding: 0 20px; /* el espaciado que hay entre los texto del menu */
+    color: #dac120;
+}
+
+nav ul li:hover a{
+    background-color: #CC0000;
+    border-radius: 15px;
+    color: #FFDE00;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+section{
+    justify-items: center;
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 2%;
+    border-radius: 50px;
+}
+
+.section_shops{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.css_shops_items_img{
+    margin: 3%;
+    padding: 0%;
+    display: flex;
+    width: auto;
+    height: 150px;
+    background-color: white;
+    border: 2px solid #FFDE00;
+    border-radius: 7px;
+
+}
+
+.div_infotext{
+    text-align: center;
+    font-family: Verdana, Tahoma, sans-serif;
+    border: 4px solid #B3A125;
+    border-radius: 13px;
+    background-color: #FFDE00;
+    padding: 1%;
+    margin: 5%;
+}
+
+footer{
+    color: white;
+    margin-top: 3%;
+    justify-content: space-between;
+    background-color: #2c3aa3;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: medium;
+}
+
+
+.css_siteweb_img{
+    width: 100%;
+    max-width: 65px;
+}
+
+.div_items_shop{
+    text-align: center;
+    background-color: #ffffff33;
+    margin: 1%;
+    padding: 2%;
+    border-radius: 20px;
+    border: 3px solid #FFDE00;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.div_price{
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.p_title_shops{
+    color: white;
+    font-size: large;
+    margin: 0px;
+    padding: 0px;
+}
+
+.p_price_shops{
+    color: white;
+    font-size: x-large;
+    text-decoration: line-through;
+    margin: 0;
+    padding: 5px;
+}
+
+.p_price_shops1{
+    color: white;
+    font-size: xx-large;
+    margin: 0px;
+    padding: 0px;
+    color: green;
+}
+
+.p_descuento_shops{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contact-flex{
+    border-radius: 5px;
+    display: flex;
+    font-size: 20px;
+    margin-top: 50px;
+    background-color:#3B4CCA;
+    border: 2px solid #FFDE00;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.maps-form {
+    width: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.contact-form {
+
+    padding: 10px;
+    width: 40%;
+    text-align: left;
+    display: flex;
+    flex-direction:column ;
+    align-items: left;
+    
+}
+
+.contact-form h2 {
+    color: #dac120;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.form-group {
+    width: 150%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: darkblue;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    display: flex;
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite al usuario redimensionar verticalmente */
+    min-height: 100px;
+}
+
+.form-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-buttons button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.form-buttons button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-buttons button:hover {
+    opacity: 0.8;
+}
