@@ -11,6 +11,25 @@ h1{
     /* text-align: center; */ /* Puedes quitar esto si usas justify-content */
 }
 
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    gap: 2%;
+    flex-wrap: wrap;
+    
+}
+
+.css_img_home{
+    height: 100%;
+    max-height: 55px;
+    padding-right: 5%;
+    margin: 0;
+    padding: 0;
+}
+
 .css_logo_img{ /* stilo de la imagen  */
     width: 50%; /* ajusto el tamaño de la imagen por porcentaje */
     max-width: 500px; /* ajusto el tope maximo de la imagen para que no ocupe toda la pag.  */
