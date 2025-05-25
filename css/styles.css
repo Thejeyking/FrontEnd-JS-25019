@@ -73,8 +73,7 @@ section{
 }
 
 .section_item{
-    display:flex;
-    flex-wrap: wrap;
+    display: flex;
     align-items: center;
 }  
 
@@ -96,13 +95,18 @@ section{
 }
 
 .css_items_img{
-    width: 50%;
+    width: 80%;
     height: auto;
     background-color: white;
     border: 2px solid #FFDE00;
     border-radius: 7px;
     margin: 15%;
     
+}
+
+.class_item_img{
+    margin: 0;
+    padding: 0;
 }
 
 .p_descripcion_item{
