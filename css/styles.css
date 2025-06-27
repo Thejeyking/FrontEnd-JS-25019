@@ -1,5 +1,6 @@
 body{
     background-color: #CC0000;
+    font-family: Arial, sans-serif; /* Fuente global */
 }
 
 
@@ -8,7 +9,6 @@ h1{
     justify-content: center; /* Centra las imágenes horizontalmente */
     align-items: center; /* Centra las imagenes verticalmente si tuvieran diferentes alturas */
     gap: 10%; /* Opcional: Añade un pequeño espacio entre las pokebolas y el logo */
-    /* text-align: center; */ /* Puedes quitar esto si usas justify-content */
 }
 
 h2{
@@ -39,7 +39,6 @@ h2{
 
 .css_pokebola_img{ /* stilo de la imagen  */
     width: 12%; /* ajusto el tamaño de la imagen por porcentaje */
-    /*max-width: 150px; /* ajusto el tope maximo de la imagen para que no ocupe toda la pag.  */
     height: auto; /* mantengo proporción */
 }
 
@@ -68,6 +67,7 @@ nav ul li a{
     display: inline-block; /* me aseguro que se mantengan en linea horizontal*/
     padding: 0 20px; /* el espaciado que hay entre los texto del menu */
     color: #dac120;
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
 }
 
 nav ul li:hover a{
@@ -94,12 +94,15 @@ section{
 .section_item{
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Añadir para responsividad */
+    justify-content: center; /* Centrar elementos en pantallas pequeñas */
 }  
 
 .div_buy_item{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column; /* Apilar en pantallas pequeñas */
 }
 
 .p_buy_item{
@@ -109,8 +112,13 @@ section{
     border-radius: 20px;
     padding: 5px;
     font-size: 45px;
-    margin: 35px;
+    margin: 15px; /* Ajustar margen */
+    cursor: pointer; /* Indicar que es clickeable */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
 
+.p_buy_item:hover {
+    background-color: darkgreen;
 }
 
 .css_items_img{
@@ -126,17 +134,23 @@ section{
 .class_item_img{
     margin: 0;
     padding: 0;
+    flex: 1 1 40%; /* Permitir que ocupe espacio flexible en responsive */
+    max-width: 400px; /* Limitar el ancho de la imagen */
 }
 
 .p_descripcion_item{
     color: white;
     font-size: x-large;
+    text-align: justify; /* Justificar el texto */
+    padding: 10px; /* Añadir padding */
 }
 
 .class_item{
     text-align: center;
     width: 40%;
     flex-direction: column;
+    flex: 1 1 50%; /* Permitir que ocupe espacio flexible en responsive */
+    max-width: 500px;
 }
 
 .css_shops_items_img{
@@ -189,19 +203,23 @@ footer{
     border: 3px solid #FFDE00;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+    cursor: pointer; /* Indicar que es clickeable */
+    transition: all 0.3s ease; /* Transición suave para hover */
+    flex: 1 1 calc(33% - 2%); /* Para 3 columnas en desktop, ajusta para margen */
+    box-sizing: border-box; /* Incluir padding y border en el ancho */
+    min-width: 250px; /* Ancho mínimo para evitar que se aplasten */
 }
 
 .div_items_shop:hover{
     text-align: center;
-    background-color: #ffffff33;
+    background-color: #ffffff44; /* Un poco más oscuro al pasar el mouse */
     margin: 1%;
     padding: 4%;
     border-radius: 20px;
     border: 3px solid #3B4CCA;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    transform: translateY(-5px); /* Pequeño levantamiento */
 }
 
 .div_price{
@@ -209,7 +227,7 @@ footer{
     align-items: center;
     margin: 0px;
     padding: 0px;
-    
+    justify-content: center; /* Centrar precios */
 }
 
 .p_title_shops{
@@ -240,6 +258,7 @@ footer{
     margin: 0px;
     padding: 0px;
     color: green;
+    font-weight: bold; /* Hacer el precio actual más notorio */
 }
 
 .p_price_item{
@@ -250,6 +269,8 @@ footer{
     font-size: 45px;
     color: green;
     padding: 5px;
+    margin: 15px; /* Ajustar margen */
+    font-weight: bold;
 }
 
 .p_descuento_shops{
@@ -257,6 +278,7 @@ footer{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
+    font-weight: bold;
 }
 
 .contact-flex{
@@ -291,19 +313,26 @@ footer{
     border-radius: 5px;
     display: flex;
     align-items: center;
+    justify-content: center; /* Centrar el iframe */
+    flex: 1 1 45%; /* Flexible en responsive */
+    min-width: 300px;
+}
 
+.maps-form iframe {
+    max-width: 100%; /* Asegurar que el iframe no se desborde */
+    height: 400px; /* Ajustar altura */
 }
 
 
 .contact-form {
-
     padding: 10px;
     width: 40%;
     text-align: left;
     display: flex;
     flex-direction:column ;
     align-items: left;
-    
+    flex: 1 1 45%; /* Flexible en responsive */
+    min-width: 300px;
 }
 
 .contact-form h2 {
@@ -311,10 +340,11 @@ footer{
     margin-bottom: 20px;
     font-weight: bold;
     font-size: xx-large;
+    text-align: center; /* Centrar el título */
 }
 
 .form-group {
-    width: 150%;
+    width: 100%; /* Ocupar todo el ancho disponible */
     margin-bottom: 15px;
 }
 
@@ -322,20 +352,22 @@ footer{
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: darkblue;
+    color: #FFDE00; /* Color de etiqueta Pokémon */
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
+.form-group input[type="password"], /* Añadido para los campos de contraseña */
 .form-group textarea {
     display: flex;
-    width: 65%;
+    width: 100%; /* Ajustar al 100% del contenedor */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
-    
+    background-color: white; /* Fondo blanco para inputs */
+    color: #333; /* Color de texto oscuro */
 }
 
 .form-group textarea {
@@ -347,6 +379,7 @@ footer{
     margin-top: 20px;
     display: flex;
     gap: 10px;
+    justify-content: center; /* Centrar botones */
 }
 
 .form-buttons button {
@@ -355,6 +388,7 @@ footer{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: opacity 0.3s ease; /* Transición para hover */
 }
 
 .form-buttons button[type="reset"] {
@@ -370,3 +404,314 @@ footer{
 .form-buttons button:hover {
     opacity: 0.8;
 }
+
+/* Estilos para el ícono del carrito */
+.cart-icon-container {
+    position: relative;
+    display: inline-block; /* Para que el contador se posicione correctamente */
+}
+
+.cart-count {
+    background-color: #FF0000; /* Rojo Pokémon */
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7em; /* Tamaño más pequeño */
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    display: none; /* Oculto por defecto */
+}
+
+/* Estilos para el modal personalizado (reemplazo de alert) */
+.custom-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.custom-modal-content.custom-modal-info {
+    border-color: #2196F3; /* Azul para info */
+    color: #333;
+}
+.custom-modal-content.custom-modal-success {
+    border-color: #4CAF50; /* Verde para éxito */
+    color: #333;
+}
+.custom-modal-content.custom-modal-error {
+    border-color: #f44336; /* Rojo para error */
+    color: #333;
+}
+
+
+.custom-modal-close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.custom-modal-close-button:hover,
+.custom-modal-close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para la página del carrito (cart.html) */
+.cart-container {
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    border-radius: 50px;
+    margin: 20px auto;
+    max-width: 90%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.cart-container h2 {
+    color: #FFDE00;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item-card {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #FFDE00;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 20px;
+    flex-shrink: 0; /* Evitar que la imagen se encoja */
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cart-item-details h3 {
+    margin: 0;
+    color: #FFDE00;
+    font-size: 1.5em;
+}
+
+.cart-item-details p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.cart-quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.cart-quantity-control button {
+    background-color: #3B4CCA;
+    color: white;
+    border: 1px solid #FFDE00;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.cart-quantity-control button:hover {
+    background-color: #2c3aa3;
+}
+
+.remove-from-cart {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Alinear a la izquierda */
+}
+
+.remove-from-cart:hover {
+    background-color: #d32f2f;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cart-summary p {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #FFDE00;
+}
+
+.checkout-button {
+    background-color: green;
+    color: white;
+    border: 2px solid blue;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 1.5em;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Ocupar todo el ancho */
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.checkout-button:hover {
+    background-color: darkgreen;
+}
+
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+    }
+
+    .section_item, .contact-flex, .multimedia-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .class_item_img, .class_item, .contact-form, .maps-form {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .css_items_img {
+        width: 60%;
+        margin: 5% auto;
+    }
+
+    .p_title_item {
+        font-size: 38px;
+    }
+
+    .p_buy_item, .p_price_item {
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    .div_items_shop {
+        flex: 1 1 90%; /* Una columna en pantallas pequeñas */
+        margin: 10px 0;
+    }
+
+    .maps-form iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .cart-item-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item-image {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .remove-from-cart {
+        align-self: center; /* Centrar el botón de eliminar */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        flex-direction: column;
+        gap: 5%;
+    }
+
+    .css_logo_img {
+        width: 80%;
+        min-width: unset;
+    }
+
+    .css_pokebola_img {
+        width: 20%;
+    }
+
+    nav {
+        padding: 5px 10px;
+        font-size: 150%;
+    }
+
+    .div_infotext {
+        margin: 2%;
+        padding: 5px;
+    }
+
+    .p_title_item {
+        font-size: 30px;
+    }
+
+    .p_buy_item, .p_price_item {
+        font-size: 25px;
+    }
+}
+

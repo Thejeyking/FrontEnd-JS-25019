@@ -1,0 +1,65 @@
+[
+    {
+        "id": "item1",
+        "name": "Muñeco Pikachu",
+        "price": 5500,
+        "image": "../media/img/peluche1.png",
+        "description": "¡Lleva a casa la ternura y energía de Pikachu! Este adorable peluche del Pokémon favorito de todos está listo para ser tu compañero en cualquier aventura. Con sus suaves y detalladas orejas, mejillas rojas icónicas y una expresión que derretirá corazones. Es perfecto para acompañarte en todas tus aventuras. Con su piel suave, orejas puntiagudas y sus clásicas mejillas rojas. Sus medidas son: 75x40x50cm"
+    },
+    {
+        "id": "item2",
+        "name": "Muñeco Charmander",
+        "price": 3800,
+        "image": "../media/img/peluche2.png",
+        "description": "Este adorable peluche de Charmander captura la esencia ardiente del Pokémon de tipo fuego que todos adoran. Con su cola brillante y su carita llena de entusiasmo, Charmander está listo para ser tu compañero en todas tus aventuras. Fabricado con materiales de primera calidad y ultra suaves, es perfecto para abrazar, decorar tu espacio o regalar a un fanático de Pokémon. ¡Haz que Charmander sea parte de tu equipo y deja que su energía y calidez te acompañen siempre! Sus medidas son: 43x28x40cm"
+    },
+    {
+        "id": "item3",
+        "name": "Muñeco Squirtle",
+        "price": 3800,
+        "image": "../media/img/peluche3.webp",
+        "description": "Este Peluche Pokemon Squirtle Chico es perfecto para los fans de Pokemon. Con un diseño realista y suave textura, este peluche ofrece un compañero de felpa para cualquier aventura. Además, su tamaño compacto lo hace perfecto para llevar a cualquier parte. ¡Hazte con tu Squirtle Chico hoy mismo y no te pierdas la oportunidad de tener un Pokemon a tu lado en tus viajes! Sus medidas son: 9x5cm"
+    },
+    {
+        "id": "item4",
+        "name": "Muñeco Meowth",
+        "price": 3600,
+        "image": "../media/img/peluche4.png",
+        "description": "La figura de acción Meowth de la colección Pokémon es un artículo imprescindible para los fanáticos de la serie. Con una altura de 45.2 cm y un ancho de 45.4 cm, esta figura captura la esencia del icónico personaje, ideal para exhibir en estanterías o escritorios. Su diseño detallado y atractivo la convierte en una pieza coleccionable que encantará a los amantes de Pokémon de todas las edades."
+    },
+    {
+        "id": "item5",
+        "name": "Muñeco Bulbasaur",
+        "price": 3800,
+        "image": "../media/img/peluche5.webp",
+        "description": "Este adorable peluche de Bulbasaur captura todo el encanto del Pokémon de tipo planta/veneno que tanto amas. Con su inconfundible caparazón verde y su mirada amistosa, Bulbasaur está listo para ser el compañero perfecto en tus aventuras diarias. Confeccionado con materiales ultra suaves y de alta calidad, es ideal para abrazar, decorar tu habitación o regalar a un fanático de Pokémon. ¡Deja que la magia de Bulbasaur ilumine tu colección y haga florecer tu día!"
+    },
+    {
+        "id": "item6",
+        "name": "Muñeco Gengar",
+        "price": 2610,
+        "image": "../media/img/peluche6.webp",
+        "description": "Colecciona tus peluches favoritos ahora más suaves y esponjosos que nunca. Gengar modelo único, divertido y original relleno de algodón PP hecho de seda agradable para la piel y felpa suave. Este peluche mide 50 largo x 40 ancho x 39 alto, recomendado para adultos y niños fans de los videojuegos Pokémon. Esté peluche es el complemento perfecto para cualquier habitación, ideal como regalo. Es tan suave que no podrás resistirte a abrazarlo, te encantará."
+    },
+    {
+        "id": "item7",
+        "name": "Muñeco Psyduck",
+        "price": 1800,
+        "image": "../media/img/peluche7.webp",
+        "description": "Este peluche de Psyduck es perfecto para los fans de Pokémon que adoran el encanto único de este Pokémon acuático. Con su expresión confundida y su diseño adorable, Psyduck está listo para ser tu compañero de abrazos y risas. Fabricado con materiales suaves y de alta calidad, es ideal para decorar tu espacio, darle vida a tus colecciones o sorprender a un fanático de Pokémon. ¡No pierdas la oportunidad de tener a Psyduck y su inconfundible carisma en tu vida! Sus medidas son: 32x32x23cm"
+    },
+    {
+        "id": "item8",
+        "name": "Muñeco Cyndaquil",
+        "price": 4500,
+        "image": "../media/img/peluche8.webp",
+        "description": "Esta adorable peluche de Pokemon Cyndaqui es perfecta para cualquier fanático de la franquicia. Con suave y cómodo material, podrás abrazar y jugar con tu Pokemon favorito. Además, su tamaño es conveniente para llevar contigo a todas partes. ¡Colecciónalos todos! medidas: 50x43cm"
+    },
+    {
+        "id": "item9",
+        "name": "Muñeco Charizard",
+        "price": 5400,
+        "image": "../media/img/peluche9.webp",
+        "description": "Estos peluches de 80 cm, 60 cm, 35 cm y 20 cm de Charizard son el regalo perfecto para cualquier fan de Pokémon. Con un diseño detallado y materiales suaves al tacto, representa fielmente a uno de los personajes más icónicos de la franquicia. Su tamaño lo hace ideal tanto para decoración como para abrazarlo. Es una pieza llamativa que combina nostalgia y calidad, ideal para coleccionistas, niños o cualquier amante del universo Pokémon."
+    }
+]
