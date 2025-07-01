@@ -1,4 +1,3 @@
-// Función para mostrar mensajes en un modal personalizado en lugar de alert()
 function showModalMessage(message, type = 'info') {
     const modal = document.createElement('div');
     modal.className = 'custom-modal';
@@ -29,14 +28,8 @@ function showModalMessage(message, type = 'info') {
     }
 }
 
-// Simulación de carrito de compras y usuarios (se re-importan o asumen disponibles globalmente si script.js se carga antes)
-// Para que esto funcione, `script.js` debe cargarse ANTES que `producto.js`
-// Y las funciones `addToCart`, `getCurrentUser`, `allProducts` deben ser accesibles globalmente.
-// Si no están globalmente disponibles, habría que pasarles como argumentos o importarlas de otra forma.
-// Para este ejemplo, asumiremos que `allProducts`, `addToCart`, y `getCurrentUser` son globales.
 
 
-// Función para cargar los detalles del producto en producto.html
 async function loadProductDetails() {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
@@ -49,18 +42,16 @@ async function loadProductDetails() {
         return;
     }
 
-    // `allProducts` se asume que ha sido cargado por script.js
-    // Si no está disponible, habría que cargarlo aquí también (duplicación o reestructuración)
+
     if (!window.allProducts || window.allProducts.length === 0) {
-        // Fallback: si por alguna razón allProducts no se cargó en script.js, lo cargamos aquí.
-        // En una aplicación real, se manejaría con promesas o un sistema de módulos.
-        await loadProducts(); // Llama a la función de carga de productos si no existen
+
+        await cargarProdudcto(); 
     }
 
     const product = window.allProducts.find(p => p.id === productId);
 
     if (product) {
-        productTitleElement.textContent = product.name; // Actualizar el título de la página
+        productTitleElement.textContent = product.name; 
         productDetailsSection.setAttribute('data-id', product.id);
         productDetailsSection.setAttribute('data-name', product.name);
         productDetailsSection.setAttribute('data-price', product.price);
@@ -80,17 +71,16 @@ async function loadProductDetails() {
             </div>
         `;
 
-        // Añadir event listener al botón "Añadir al Carrito" después de que se ha creado
         const addToCartButton = productDetailsSection.querySelector('.add-to-cart');
         if (addToCartButton) {
             addToCartButton.addEventListener('click', (e) => {
-                const currentUser = getCurrentUser(); // Asume que getCurrentUser es global
+                const currentUser = getCurrentUser();
                 if (!currentUser) {
                     showModalMessage('Debes iniciar sesión para agregar productos al carrito.', 'info');
-                    window.location.href = '../pages/login.html'; // Redirigir al login
+                    window.location.href = '../pages/login.html';
                     return;
                 }
-                addToCart(product); // Asume que addToCart es global
+                addToCart(product);
             });
         }
 
@@ -100,9 +90,6 @@ async function loadProductDetails() {
     }
 }
 
-// Inicialización de la página de producto cuando el DOM esté cargado
 document.addEventListener('DOMContentLoaded', async () => {
-    // Es crucial que `script.js` se cargue antes y defina `allProducts` y las funciones compartidas.
-    // Aquí simplemente llamamos a la función de carga de detalles del producto.
     await loadProductDetails();
 });

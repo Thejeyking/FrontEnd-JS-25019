@@ -32,7 +32,7 @@ function showModalMessage(message, type = 'info') {
 let users = JSON.parse(localStorage.getItem('users')) || [];
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-async function loadProducts() {
+async function cargarProdudcto() {
     try {
         const response = await fetch('../products.json');
         if (!response.ok) {
@@ -45,7 +45,7 @@ async function loadProducts() {
     }
 }
 
-function registerUser(username, password) {
+function registrarUser(username, password) {
     if (users.find(user => user.username === username)) {
         showModalMessage('El usuario ya existe.', 'error');
         return false;
@@ -68,7 +68,7 @@ function loginUser(username, password) {
     }
 }
 
-function logoutUser() {
+function cerrarSesionUser() {
     localStorage.removeItem('currentUser');
     localStorage.removeItem('cart');
     cart = [];
@@ -100,7 +100,7 @@ function updateAuthLinks() {
             if (logoutLink) {
                 logoutLink.addEventListener('click', (e) => {
                     e.preventDefault();
-                    logoutUser();
+                    cerrarSesionUser();
                     window.location.href = '../index.html'; 
                 });
             }
@@ -236,7 +236,7 @@ async function loadProductDetails() {
     }
 
     if (allProducts.length === 0) {
-        await loadProducts();
+        await cargarProdudcto();
     }
 
     const product = allProducts.find(p => p.id === productId);
@@ -282,7 +282,7 @@ async function loadProductDetails() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    await loadProducts();
+    await cargarProdudcto();
     
     updateAuthLinks();
     updateCartDisplay();
@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 showModalMessage('Las contraseñas no coinciden.', 'error');
                 return;
             }
-            if (registerUser(username, password)) {
+            if (registrarUser(username, password)) {
                 registerForm.reset();
             }
         });
